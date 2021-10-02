@@ -25,6 +25,12 @@ public class NewNote extends AppCompatActivity {
         dataVal = getIntent().getStringExtra(MainActivity.DATA);
         EditText editText = findViewById(R.id.input_panel);
         editText.setText(dataVal);
+        
+        editText.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+            }
+        });
     }
 
 
