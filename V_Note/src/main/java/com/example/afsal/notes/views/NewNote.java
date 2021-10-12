@@ -31,6 +31,7 @@ public class NewNote extends AppCompatActivity {
                 getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
             }
         });
+        editText.setSelection(editText.getText().length());
     }
 
 
